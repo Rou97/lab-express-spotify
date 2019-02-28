@@ -1,0 +1,21 @@
+<h1>Artist page</h1>
+
+
+
+{{#each listOfArtists}}
+  <p>{{this.name}}</p>  
+    {{#if this.images.length}}
+    <img src="{{this.images.1.url}}" alt="Artist image">
+    {{/if}}
+{{/each}}
+
+
+{{!-- otro forma de hacerlo --}}
+{{!-- {{#each listOfArtists}}
+  <p>{{this.name}}</p>  
+  {{#each this.images}}
+  {{#equal @index 0}}º
+    <img src="{{this.url}}" alt="Artist image">
+    {{/equal}}
+  {{/each}}
+{{/each}} --}}
